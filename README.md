@@ -1,38 +1,14 @@
-# create-svelte
+# Experiencia Digital Umbrella Company
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> Objetivo: crear una experiencia interactiva que asombre a los visitantes de la landing page
+> LIVE DEMO: https://umbrellacompany.angellos.net
 
-## Creating a project
+## Detalles Técnicos
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Stack
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Se hace uso de SvelteKit para el desarrollo de la experiencia digital, aprovechando al máximo la reactividad y simpleza del mismo
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Deployment
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+La plataforma donde se despliega el producto final es Wordpress mediante el uso de un plugin (generado por index-builder.js al construir el proyecto)
