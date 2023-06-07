@@ -10,4 +10,6 @@ envsource .env
 
 yarn build
 
-BUILD_PATH=$BUILD_PATH node index-builder.js
+node index-builder.js
+
+echo "'index.php' file generated at ./build"
