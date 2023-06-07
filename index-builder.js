@@ -14,7 +14,7 @@ const REGISTER_STYLE_HEAD = `wp_register_style(`;
 const REGISTER_STYLE_TAIL = `__FILE__), array(), "1.0", "all");`;
 
 const REGISTER_SCRIPT_HEAD = `wp_register_script(`;
-const REGUSTER_SCRIPT_TAIL = `__FILE__), array(), "1.0", false);`;
+const REGISTER_SCRIPT_TAIL = `__FILE__), array(), "1.0", false);`;
 
 const pluginPrefix = JSON.parse(process.env.PLUGIN_PREFIX);
 const pluginShortcode = JSON.parse(process.env.PLUGIN_SHORTCODE);
@@ -79,7 +79,7 @@ function registerResource(file = '') {
 		tail = REGISTER_STYLE_TAIL;
 	} else if (fileExtension == 'js') {
 		head = REGISTER_SCRIPT_HEAD;
-		tail = REGUSTER_SCRIPT_TAIL;
+		tail = REGISTER_SCRIPT_TAIL;
 	}
 
 	return `${head}"${fileId}", plugins_url("${file}", ${tail}`;
@@ -188,8 +188,6 @@ function writeToFile(content = '') {
 
 function main() {
 	let result = buildIndexStr();
-
-	console.log(result);
 
 	writeToFile(result);
 }
