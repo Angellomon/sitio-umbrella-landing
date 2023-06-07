@@ -4,9 +4,12 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
 	</head>
-	<body style="margin: 0; padding: 0; background-color: black">
-		%sveltekit.body%
+	<body
+		style="margin: 0; padding: 0; background-color: black"
+		data-sveltekit-preload-data="off"
+		data-sveltekit-preload-code="off"
+	>
+		%sveltekit.head% %sveltekit.body%
 	</body>
 </html>
