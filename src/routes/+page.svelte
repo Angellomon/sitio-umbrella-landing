@@ -1,5 +1,5 @@
-<section id="presentacion" />
-<section id="servicios" />
-<section id="innovacion" />
-<section id="marcas" />
-<section id="equipo" />
+<script lang="ts">
+	import { browser } from '$app/environment';
+
+	if (browser) console.log(window.location.search);
+</script>
