@@ -12,4 +12,4 @@ yarn build
 
 node index-builder.js
 
-echo "'index.php' file generated at ./build"
+echo "'.php' file generated at ./build"
