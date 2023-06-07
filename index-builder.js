@@ -11,10 +11,10 @@ const indexInfo = {
 };
 
 const REGISTER_STYLE_HEAD = `wp_register_style(`;
-const REGISTER_STYLE_TAIL = `__FILE__), array(), "1.0", "all");`;
+const REGISTER_STYLE_TAIL = `__FILE__), array(), "", "all");`;
 
 const REGISTER_SCRIPT_HEAD = `wp_register_script(`;
-const REGISTER_SCRIPT_TAIL = `__FILE__), array(), "1.0", false);`;
+const REGISTER_SCRIPT_TAIL = `__FILE__), array(), "", false);`;
 
 const pluginPrefix = JSON.parse(process.env.PLUGIN_PREFIX);
 const pluginShortcode = JSON.parse(process.env.PLUGIN_SHORTCODE);
@@ -133,10 +133,11 @@ ${shortcode}
 }
 
 function enqueueResource(resourceId = '') {
+	const enqueueId = resourceId.replaceAll('.', '_');
 	if (resourceId.endsWith('js')) {
-		return `wp_enqueue_script("${resourceId}", '1.0', true);`;
+		return `wp_enqueue_script("${enqueueId}", '', true);`;
 	} else if (resourceId.endsWith('css')) {
-		return `wp_enqueue_style("${resourceId}");`;
+		return `wp_enqueue_style("${enqueueId}");`;
 	}
 
 	return '';
@@ -180,7 +181,7 @@ function buildShortcode() {
 function writeToFile(content = '') {
 	const buildPath = JSON.parse(process.env.BUILD_PATH);
 	try {
-		fs.writeFileSync(`${buildPath}/index.php`, content);
+		fs.writeFileSync(`${buildPath}/${pluginShortcode}.php`, content);
 	} catch (err) {
 		console.error(err);
 	}
