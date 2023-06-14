@@ -1,3 +1,57 @@
+@font-face {
+	font-family: 'Lexend Regular';
+	src: url('fonts/Lexend-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend Bold';
+	src: url('fonts/Lexend-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend ExtraBold';
+	src: url('fonts/Lexend-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend Black';
+	src: url('fonts/Lexend-Black.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend ExtraLight';
+	src: url('fonts/Lexend-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend SemiBold';
+	src: url('fonts/Lexend-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend Thin';
+	src: url('fonts/Lexend-Thin.ttf');
+}
+
 :root {
-    
+	--background-color: #000000;
+	--accent-orange: #ff6b3d;
+	--accent-yellow: #ffbe57;
+	--accent-red: #e53645;
+	--link-color: #808080;
+	--link-hover-color: #fff;
+	--link-icon-color: #4d4d4d;
+	--link-icon-hover-color: var(--link-hover-color);
+
+	font-family: 'Lexend Regular';
+}
+
+a {
+	color: var(--link-color);
+
+	font-family: 'Lexend Regular';
+}
+
+a:hover {
+	color: var(--link-hover-color);
 }

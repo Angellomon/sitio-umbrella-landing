@@ -12,10 +12,10 @@
 		height: 100%;
 		margin: -8px;
 		position: absolute;
+		z-index: -100;
 	}
 
 	circle {
-		z-index: 100;
 		position: absolute;
 		fill: var(--color-1);
 	}
