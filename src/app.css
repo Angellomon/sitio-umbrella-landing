@@ -19,8 +19,18 @@
 }
 
 @font-face {
+	font-family: 'Lexend Medium';
+	src: url('fonts/Lexend-Medium.ttf');
+}
+
+@font-face {
 	font-family: 'Lexend ExtraLight';
 	src: url('fonts/Lexend-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'Lexend Light';
+	src: url('fonts/Lexend-Light.ttf');
 }
 
 @font-face {
@@ -42,8 +52,12 @@
 	--link-hover-color: #fff;
 	--link-icon-color: #4d4d4d;
 	--link-icon-hover-color: var(--link-hover-color);
+	--text-white: #fff;
+	--laptop-max-width: 1024px;
 
 	font-family: 'Lexend Regular';
+
+	color: var(--text-white);
 }
 
 a {
@@ -54,4 +68,16 @@ a {
 
 a:hover {
 	color: var(--link-hover-color);
+}
+
+h1 {
+	color: var(--text-white);
+	font-family: 'Lexend Light';
+
+	font-size: 3.3rem;
+	line-height: 90%;
+}
+
+p {
+	font-family: 'Lexend Light';
 }
