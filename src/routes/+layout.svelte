@@ -1,11 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import InteractiveCursor from '../lib/components/interactive-cursor/interactive-cursor.svelte';
-	import { size, coords } from '$lib/store';
-
-	const handleMouseMove = (e: MouseEvent) => {
-		$coords = { x: e.clientX, y: e.clientY };
-	};
+	import { coords, size } from '$lib/store';
 
 	const handleMouseDown = () => {
 		$size = 20;
@@ -14,22 +10,14 @@
 	const handleMouseUp = () => {
 		$size = 10;
 	};
+
+	const handleMouseMove = (e: MouseEvent) => {
+		$coords = { x: e.clientX, y: e.clientY };
+	};
 </script>
 
 <main on:mousemove={handleMouseMove} on:mousedown={handleMouseDown} on:mouseup={handleMouseUp}>
 	<InteractiveCursor />
-	<header>
-		<nav>
-			<ul on:mousemove={handleMouseMove}>
-				<li><a href="#servicios">Servicios</a></li>
-				<li><a href="#innovacion">Innovación</a></li>
-				<li><a href="#marcas">Marcas</a></li>
-				<li><a href="#equipo">Equipo</a></li>
-				<li />
-			</ul>
-		</nav>
-	</header>
-
 	<slot />
 </main>
 
@@ -43,14 +31,5 @@
 		background-color: var(--background-color);
 
 		position: relative;
-	}
-
-	ul {
-		list-style-type: none;
-	}
-
-	ul a {
-		text-decoration: none;
-		background: transparent;
 	}
 </style>
