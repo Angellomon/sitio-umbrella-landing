@@ -1,46 +1,46 @@
 @font-face {
 	font-family: 'Lexend Regular';
-	src: url('fonts/Lexend-Regular.ttf');
+	src: url('/fonts/Lexend-Regular.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend Bold';
-	src: url('fonts/Lexend-Bold.ttf');
+	src: url('/fonts/Lexend-Bold.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend ExtraBold';
-	src: url('fonts/Lexend-ExtraBold.ttf');
+	src: url('/fonts/Lexend-ExtraBold.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend Black';
-	src: url('fonts/Lexend-Black.ttf');
+	src: url('/fonts/Lexend-Black.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend Medium';
-	src: url('fonts/Lexend-Medium.ttf');
+	src: url('/fonts/Lexend-Medium.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend ExtraLight';
-	src: url('fonts/Lexend-ExtraLight.ttf');
+	src: url('/fonts/Lexend-ExtraLight.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend Light';
-	src: url('fonts/Lexend-Light.ttf');
+	src: url('/fonts/Lexend-Light.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend SemiBold';
-	src: url('fonts/Lexend-SemiBold.ttf');
+	src: url('/fonts/Lexend-SemiBold.ttf');
 }
 
 @font-face {
 	font-family: 'Lexend Thin';
-	src: url('fonts/Lexend-Thin.ttf');
+	src: url('/fonts/Lexend-Thin.ttf');
 }
 
 :root {
@@ -57,7 +57,7 @@
 
 	font-family: 'Lexend Regular';
 
-	color: var(--text-white);
+	color: var(--text-white)!important;
 }
 
 a {
