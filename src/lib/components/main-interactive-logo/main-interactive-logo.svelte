@@ -1,33 +1,18 @@
 <script lang="ts">
-	import anime, { type AnimeInstance } from 'animejs';
-	import { onMount } from 'svelte';
-
-	let svgPath: SVGPathElement;
-	let pathAnimation: AnimeInstance;
-
-	onMount(() => {
-		pathAnimation = anime({
-			targets: '#main-interactive-logo',
-			scale: [0, 1],
-			duration: 2000,
-			easing: 'easeInOutSine'
-		});
-	});
 </script>
 
-<svg
-	version="1.1"
-	id="main-interactive-logo"
-	xmlns="http://www.w3.org/2000/svg"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	viewBox="0 0 1000 700"
-	style="enable-background:new 0 0 500 700;"
-	xml:space="preserve"
->
-	<path
-		bind:this={svgPath}
-		class="main-path-1"
-		d="M77.7,113.1c0,98.3-2.8,196.8,0.7,295.1
+<div>
+	<svg
+		version="1.1"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 0 1000 700"
+		style="enable-background:new 0 0 500 700;"
+	>
+		<path
+			id="main-interactive-logo"
+			class="main-path-1"
+			d="M77.7,113.1c0,98.3-2.8,196.8,0.7,295.1
 	c2.9,62,17.2,128.4,66.5,170.5c65.2,59.3,171.6,59,242.8,10.5c53.7-36.6,74.9-81.4,101.2-137.8c8.8-19,0.2-38-14.4-45
 	c-15.6-7.5-37.7-1.8-47.7,18.7c-11.6,24-35,74.2-66,99c-30,24-64.1,31-77,31.2c-33.1,0.4-75-3.2-105.5-44.1
 	c-19.2-25.8-27.3-58.1-29.2-89.6c-3.9-62.9-2-125.8-2.2-188.8c-0.1-32.8-0.2-113-0.2-119.8C146.7,63.1,77.7,63.1,77.7,113.1z
@@ -36,12 +21,17 @@
 	c30-24,64.1-31,77-31.2c33.1-0.4,75,3.2,105.5,44.1c19.2,25.8,27.3,58.1,29.2,89.6c3.9,62.9,2,125.8,2.2,188.8
 	c0.1,32.8,0.2,113,0.2,119.8C853.3,636.9,922.3,636.9,922.3,586.9z M500.5,383.6c45.5-1.1,45.4-67.7,0-69
 	C455.1,315.8,455.2,382.4,500.5,383.6z"
-	/>
-</svg>
+		/>
+	</svg>
+</div>
 
 <style type="text/css">
 	.main-path-1 {
 		fill: #ffffff;
+	}
+
+	div {
+		min-width: 30ch;
 	}
 
 	svg {
@@ -51,5 +41,11 @@
 
 	svg path {
 		transform: scale(0.8);
+	}
+
+	@media screen and (min-width: 1024px) {
+		div {
+			min-width: 40ch;
+		}
 	}
 </style>
