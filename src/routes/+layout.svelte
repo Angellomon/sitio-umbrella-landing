@@ -23,13 +23,6 @@
 
 <style>
 	main {
-		--color-1: #ff6b3d;
-		--color-2: #e53645;
-		--color-3: #ffbe57;
-		--background-color: transparent;
-
-		background-color: var(--background-color);
-
 		position: relative;
 	}
 </style>
