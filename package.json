@@ -30,7 +30,5 @@
 		"vite": "^4.3.0"
 	},
 	"type": "module",
-	"dependencies": {
-		"animejs": "^3.2.1"
-	}
+	"dependencies": {}
 }
