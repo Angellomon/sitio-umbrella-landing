@@ -21,11 +21,13 @@ const config = {
 
 if (process.env.NODE_ENV === 'production') {
 	const hostname = JSON.parse(process.env.HOSTNAME);
-	const base = JSON.parse(process.env.BASE_PATH);
+	const basePath = JSON.parse(process.env.BASE_PATH);
+	const assetsPath = JSON.parse(process.env.ASSETS_PATH);
 
 	config.kit.paths = {
-		base,
-		assets: hostname + base
+		base: basePath,
+		assets: hostname + assetsPath,
+		relative: true
 	};
 }
 
