@@ -8,12 +8,14 @@
 </script>
 
 <main>
-	<div class="text-side">
-		<MainTitle />
-		<MainMessage />
-	</div>
-	<div class="logo-side">
-		<MainInteractiveLogo />
+	<div class="wrapper">
+		<div class="text-side">
+			<MainTitle />
+			<MainMessage />
+		</div>
+		<div class="logo-side">
+			<MainInteractiveLogo />
+		</div>
 	</div>
 </main>
 
@@ -24,20 +26,48 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 
-		margin: 3ch 30ch;
+		padding: 3rem 5rem;
+
+		min-height: 100vh;
+	}
+
+	div.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5ch;
 	}
 
 	div.text-side {
 	}
 
 	div.logo-side {
+		display: flex;
+		flex-direction: columns;
+		justify-content: center;
+		align-items: center;
+		align-self: center;
 	}
 
 	@media screen and (max-width: 1024px) {
-		main {
+		main,
+		div.wrapper {
 			flex-direction: column-reverse;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		main,
+		div.wrapper {
+			gap: 2ch;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		div.text-side {
+			max-width: 50%;
 		}
 	}
 </style>
